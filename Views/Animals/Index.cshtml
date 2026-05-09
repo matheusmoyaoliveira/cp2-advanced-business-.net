@@ -1,0 +1,77 @@
+﻿@model IEnumerable<cp2_advanced_business_.net.Models.Animal>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Lista de Animais</h1>
+
+<p>
+    <a asp-action="Create">Cadastrar Animal</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Especie)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Raca)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Idade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Peso)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeTutor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TelefoneTutor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataCadastro)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Especie)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Raca)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Idade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Peso)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeTutor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TelefoneTutor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataCadastro)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">Editar</a>
+                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-warning btn-sm">Detalhes</a>
+                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-warning btn-sm">Excluir</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
