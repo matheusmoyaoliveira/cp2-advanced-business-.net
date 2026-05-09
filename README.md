@@ -85,4 +85,5 @@ Projeto atende todos os requisitos com EF Core, Migration e CRUD completo.
 ---
 
 ## 👨‍💻 Autor
-Matheus
+Matheus Moya de Oliveira		- RM 562822
+Ana Carolina Pereira Fontes		- RM 562145
