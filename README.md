@@ -1,92 +1,88 @@
-# Checkpoint 002 — ASP.NET Core MVC (Clínica Veterinária)
+# 🐾 Checkpoint 002 — Sistema de Clínica Veterinária
 
-Sistema CRUD para cadastro de animais, desenvolvido com ASP.NET Core MVC e Entity Framework Core, incluindo Migrations e persistência em SQL Server (LocalDB).
+Projeto desenvolvido em **ASP.NET Core MVC com Entity Framework Core**, implementando um CRUD completo para gerenciamento de animais.
 
-## Objetivo
+---
 
-Atender aos requisitos da Checkpoint:
+## 📌 Objetivo
+- Migration ✔
+- CRUD completo ✔
+- Tabela essencial ✔
+- Listagem ✔
 
-- Migration configurada
-- Tabela essencial (sem relacionamentos)
-- CRUD completo
-- Listagem de itens cadastrados
+---
 
-## Stack
-
+## 🛠️ Tecnologias
 - .NET 10
 - ASP.NET Core MVC
 - Entity Framework Core
 - SQL Server LocalDB
 
-## Estrutura do Projeto
+---
 
-cp2-advanced-business-.net/
-├── Controllers/
-├── Data/
-├── Migrations/
-├── Models/
-├── Views/
-├── wwwroot/
-├── docs/
-│   └── evidencias/
-├── appsettings.json
-└── Program.cs
+## 📂 Estrutura
+```
+Controllers/
+Models/
+Views/
+Data/
+Migrations/
+docs/evidencias/
+```
 
-## Modelagem
+---
 
-### Entidade: Animal
-
-- Id
-- Nome
-- Especie
-- Raca
-- Idade
-- Peso
-- NomeTutor
-- TelefoneTutor
-- DataCadastro
-
-## Migrations
-
-Criar migration:
-
-dotnet ef migrations add InitialCreate
-
-Aplicar no banco:
-
-dotnet ef database update
-
-## CRUD
-
-Funcionalidades:
-
-- Listar animais
-- Criar animal
-- Editar animal
-- Visualizar detalhes
-- Excluir animal
-
-Rota principal:
-
-/Animais
-
-## Como Executar
-
+## ▶️ Execução
+```
 dotnet restore
 dotnet build
 dotnet ef database update
 dotnet run
+```
 
 Acesse:
-
 http://localhost:5298/Animais
 
-## Evidências
+---
 
-Local:
+## 📸 Evidências
 
-docs/evidencias/
+### Estrutura do Projeto
+![Estrutura](docs/evidencias/01-estrutura-projeto.png)
 
-## Conclusão
+### Model Animal
+![Model](docs/evidencias/02-model-animal.png)
 
-O projeto atende todos os requisitos da Checkpoint 2, incluindo uso de Migration, CRUD completo e persistência em banco de dados.
+### DbContext
+![DbContext](docs/evidencias/03-appdbcontext.png)
+
+### Program.cs
+![Program](docs/evidencias/04-program-dbcontext.png)
+
+### Migrations
+![Migrations](docs/evidencias/06-migrations.png)
+
+### Listagem
+![Lista](docs/evidencias/07-tela-listagem-animais.png)
+
+### Create
+![Create](docs/evidencias/08-tela-create-animal.png)
+
+### Details
+![Details](docs/evidencias/09-tela-details-animal.png)
+
+### Edit
+![Edit](docs/evidencias/10-tela-edit-animal.png)
+
+### Delete
+![Delete](docs/evidencias/11-tela-delete-animal.png)
+
+---
+
+## 🎯 Conclusão
+Projeto atende todos os requisitos com EF Core, Migration e CRUD completo.
+
+---
+
+## 👨‍💻 Autor
+Matheus
